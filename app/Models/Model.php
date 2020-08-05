@@ -16,4 +16,9 @@ class Model extends EloquentModel
         return $query->orderBy('order', 'desc');
     }
 
+    public function updateReplyCount()
+    {
+        $this->reply_count = $this->replies->count();
+        $this->save();
+    }
 }
