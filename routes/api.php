@@ -95,7 +95,10 @@ Route::prefix('v1')
                         ->name('topics.replies.destroy');
                     // 通知列表
                     Route::get('notifications', 'NotificationsController@index')
-                        ->name('notivications.index');
+                        ->name('notifications.index');
+                    // 通知统计
+                    Route::get('notifications/stats', 'NotificationsController@stats')
+                        ->name('notifications.stats');
                 });
             });
     });
